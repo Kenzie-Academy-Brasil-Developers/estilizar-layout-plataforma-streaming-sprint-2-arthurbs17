@@ -69,6 +69,7 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		text-transform: uppercase;
 		font-weight: bold;
 		padding: 5px 15px;
+		margin-top: 20px;
 	}
 
 /*PÁGINA INICIAL*/
@@ -77,14 +78,11 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 	}
 	
 	section{
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
-		align-items: center;
 		color: #5F5F5F;
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 		font-size: 12px;
 		font-weight: lighter;
+		width: 100%;
 	}
 
 	.user_box, .avatar_box{
@@ -92,16 +90,14 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		max-width: var(--box_usuario);
-		width: 100%;
-		height: 100%;
+		width: var(--box_usuario);
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: auto;
 	}
 
 	.user_box{
-		margin-bottom: 7%;
+		margin-bottom: 3%;
 	}
 
 	.avatar_box img:hover{
@@ -116,9 +112,10 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 	.users_box{
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-around;
-		align-items: center;
-		max-width: 858px;
+		width: 100%;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	figcaption {
@@ -127,8 +124,8 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 	.avatar_box img{
 		border: 2px solid #141414;
-		width: 70%;
-		height: 70%;
+		width: 80%;
+		height: 80%;
 		max-width: var(--box_usuario);
 	}
 	
@@ -136,22 +133,24 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 	#who_watching{
 		font-size: 24px;
 		color: #FFFFFF;
-		margin-bottom: 7%;
+		margin-bottom: 20px;
+		text-align: center;
 	}
 
 	.name{
-		margin-top: 10%;
+		margin-top: 5px;
 	}
 
 	@media (min-width: 500px) {
 		.topo{
-			margin-left: 1%;
+			margin-left: 2%;
 			align-items: flex-start;
 		}
 
 		.users_box{
 			flex-flow: row nowrap;
-			margin-top: 10px;
+			max-width: 858px;
+			
 		}
 
 		.pg-home{
