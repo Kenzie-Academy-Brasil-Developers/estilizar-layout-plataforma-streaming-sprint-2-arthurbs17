@@ -16,24 +16,154 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
-  
+  --box_usuario: 186px;
 }
+
+* {
+	padding:0;
+	margin:0;
+	vertical-align:baseline;
+	list-style:none;
+	border:0
+	}
 
 /*BODY*/
 	body{
-
+		background-color: #141414;
+		color: #FFFFFF;
 	}
 
 /*TOPO*/
-	header.topo{
-		
+	.topo{
+		width: 100%;
+		height: 30%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+	}
+
+	.topo figure{
+		width: 60px;
+		height: 40px;
+	}
+
+	.topo figcaption{
+		display: none;
 	}
 
 /*RODAPÉ*/
 	
-
-/*PÁGINA INICIAL*/
-	div.pg-home{
-		
+	.footer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 7%;
 	}
 
+	.button_manager{
+		color:#5F5F5F;
+		background-color: #141414;
+		border: 1px solid #5F5F5F;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 5px 15px;
+	}
+
+/*PÁGINA INICIAL*/
+	.pg-home, section{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		max-width: 500px;
+		color: #5F5F5F;
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		font-size: 12px;
+		font-weight: lighter;
+	}
+
+	.user_box, .avatar_box{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: var(--box_usuario);
+		width: 100%;
+		height: 100%;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+
+	.user_box{
+		margin-bottom: 7%;
+	}
+
+	.avatar_box img:hover{
+		border-color: #ECECEF;
+	}
+
+	.button_manager:hover{
+		border-color: #ECECEF;
+		color: #ECECEF;
+	}
+
+	.users_box{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	figcaption {
+		display: none;
+	}
+
+	.avatar_box img{
+		border: 2px solid #141414;
+		width: 70%;
+		height: 70%;
+		max-width: var(--box_usuario);
+	}
+	
+
+	#who_watching{
+		font-size: 24px;
+		color: #FFFFFF;
+		margin-bottom: 7%;
+	}
+
+	.name{
+		margin-top: 10%;
+	}
+
+	@media (min-width: 500px) {
+		.topo{
+			margin-left: 1%;
+			align-items: flex-start;
+		}
+
+		.users_box{
+			flex-flow: row nowrap;
+			margin-top: 10px;
+		}
+
+		.pg-home{
+			max-width: 100%;
+		}
+
+		section{
+			align-content: center;
+			justify-content: center;
+			margin-top: 80px;
+		}
+
+		.user_box{
+			max-width: 858px;
+		}
+
+		#who_watching{
+			font-size: 36px;
+	}
